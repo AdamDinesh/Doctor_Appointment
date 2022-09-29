@@ -1,0 +1,207 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  font-family: "Roboto", sans-serif;
+}
+body {
+  background-color: #e8f1ff;
+}
+.form-header {
+  /* padding: 30px;
+  border-bottom: 1px solid #c8d7ed;
+  margin-bottom: 40px; */
+  padding: 30px 0 20px;
+  border-bottom: 1px solid #c8d7ed;
+  margin-bottom: 25px;
+}
+.form-heading {
+  color: #102d80;
+  line-height: 1.05;
+  letter-spacing: -0.5px;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+}
+select,
+textarea,
+input:not(input[type="radio"]) {
+  padding: 6px 16px;
+  font-size: 16px;
+  margin-bottom: 10px;
+  width: 100%;
+  font-family: inherit;
+  border: 1px solid rgba(36, 98, 185, 0.542);
+  height: 35px;
+  border-radius: 5px;
+}
+input[type="checkbox"] {
+  height: 16px !important;
+  margin-right: 10px;
+  margin-bottom: 0 !important;
+  /* border:1px solid #2462B9 !important; */
+}
+option,
+select,
+input[type="date"],
+input[type="datetime-local"] {
+  color: #3a3a3a;
+}
+.label {
+  font-size: 15px;
+  display: block;
+  color: #102d80;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+.label-secondary {
+  display: block;
+  font-size: 13px;
+  color: rgba(36, 98, 185, 0.7);
+  margin-left: 10px;
+}
+.laber-fullname {
+  position: absolute;
+}
+.fullname {
+  position: relative;
+}
+.form-container {
+  max-width: 750px;
+  margin: 40px auto 20px;
+  padding: 0px 60px 20px;
+  border-radius: 11px;
+  /* background-color: #e8f1ff; */
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.input-box {
+  padding: 10px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.input-fulname {
+  padding-top: 0 !important;
+}
+.input-fields {
+  padding: 20px 0;
+}
+.input-col-3 {
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+}
+.address {
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  column-gap: 20px;
+  row-gap: 10px;
+  margin-bottom: 15px;
+}
+.address .address-input {
+  width: 48%;
+}
+.contact,
+.gender {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 5px 10px;
+}
+
+.gender input {
+  width: 20px;
+  height: 15px;
+  margin-right: 10px;
+}
+.contact label,
+.gender label {
+  cursor: pointer;
+  color: #102d80;
+}
+.contact input,
+#chkbox {
+  width: 25px !important;
+}
+#appointment-form *:focus:not(input[type="radio"], input[type="checkbox"]) {
+  border: none;
+  outline: 1px solid currentColor;
+}
+#appointment-form *::placeholder {
+  color: #cccccc;
+  font-size: 15px;
+}
+.text-box {
+  margin-top: 10px;
+}
+.check-box-agree {
+  margin: 10px 0 20px;
+  display: flex;
+  align-items: center;
+}
+.checkbox-label {
+  cursor: pointer;
+  font-size: 15px;
+}
+
+textarea {
+  height: 110px;
+  padding: 20px;
+}
+.footer {
+  margin: 30px 0 20px;
+  text-align: center;
+}
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  font-size: 15px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  font-weight: 500;
+  background-color: #102d80;
+  color: #fff;
+  cursor: pointer;
+}
+.btn-close {
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: -50px;
+  background-color: #fff;
+  fill: #c3bebe;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s;
+}
+.btn-close:hover {
+  color: #fff;
+  fill: #333;
+  /* background: #f0483e; */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+.form-main-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  height: 100vh;
+  overflow-y: scroll;
+}
+.form-main-container::-webkit-scrollbar {
+  display: none;
+}
+.form-section {
+  display: none;
+}

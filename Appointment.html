@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="form.css" />
+    <link rel="stylesheet" href="Appoinment.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <span>Health</span>
+        <span>Bloom</span>
+      </div>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="welcome.html" id="homepage-link">Home</a></li>
+          <li>
+            <a
+              href="Appointment.html"
+              class="active"
+              id="appoinmentpage-link"
+              >Appointments</a
+            >
+          </li>
+          <li><a href="doctors.html">Doctors</a></li>
+          <li><a href="service.html">Service</a></li>
+          <li><a href="about.html">About</a></li>
+          <li onclick="showAppoinmentForm()" class="btn btn-primary">
+            <a>Get Appoinment</a>
+          </li>
+          <li class="profile">
+            <a href="#"><div class="profile-logo"></div></a>
+          </li>
+        </ul>
+        <div class="show-profile">
+          <div class="profile-details">
+            <p class="profile-name">UserName</p>
+            <p class="profile-email">abc@gmail.com</p>
+            <a onclick="doLogout()" class="logout" href="#">Logout</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+  <div class="sort-section">
+      <div class="sort-container">
+      
+      <div class="sort-items">
+  <ul class="sort-list">
+    <li><img class="sort-icon" onclick="doSort()" src="images/icons8-sort-24.png" alt=""> </li>
+    <li class="sort sort-all sort-list-active" onclick="filterAppointment('all')" >All</li>
+    <li class="sort sort-book" onclick="filterAppointment('Booked')">Booked</li>
+    <li class="sort sort-cancel" onclick="filterAppointment('Canceled')">Canceled</li>
+  </ul>
+      </div>  
+      </div>
+  </div>
+    <section class="appoinment-section">
+        <div class="appoinment-container">
+          <h2>Your Appointments</h2>
+          <div class="card-container">
+            <p></p>
+            <div>
+              <div class="no-cart"></div>
+            <p class="center no-data">No appoinment yet,</p>
+            <p class="center no-data"> Please book your new <a class="no-data-link" onclick="showAppoinmentForm()"  href="#"> appoinment </a><span>
+              &rarr;
+            </span></p></div>
+
+          </div>
+          <div class="no-appointments">
+            <h1>No Appointments...</h1>
+          </div>
+          <div class="patient-detail-section">
+            <form id="edit-appointmentForm" >
+          <div class="patient-full-details ">
+            
+            <h3 class="patient-title">Appoinment Details <img 
+               title="Edit Appointment" class="edit-icon"  src="images/edit-icon.png" alt="edit-appointmentForm-icon"></h3>
+              
+              <label>Name</label> <input type="text" readonly required name="username" id="pat_name" 
+              class="patient-name pat-form-input"></input>
+              <label>Email</label> <input type="email" readonly required name="useremail" id="pat_email" class="patient-email pat-form-input" ></input>
+              <label>contact</label> <input type="text" readonly required  name="usernumber" id="pat_contact"class="patient-number pat-form-input"></input>
+              <input type="hidden" name="booking_id" readonly class="booking_id">
+              <label>Doctor Name</label>
+              <select name="doctorName" id="pat_doctorName" required class="patient-doctor pat-form-input">
+                <option value="Dr.John">Dr.John</option>
+                <option value="Dr.Smith">Dr.Smith</option>
+                <option value="Dr.Adam">Dr.Adam</option>
+                <option value="Dr.Jonas">Dr.Jonas</option>
+              </select>
+              <label>Checkup Details</label>
+              <select  class="patient-checkup pat-form-input" id="pat_checkup" required  name="checkup" >
+                <option value="general Checkup">General Checkup</option>
+                <option value="Allergic">Allergic Diseases</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="skin">Skin and Venereal Disease</option>
+                <option value="ENT Disorders">
+                  Ear,Nose & Throat Disorders
+                </option>
+                <option value="Eye">Eye Center</option>
+                <option value="Infections">Infections Diseases</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Oncology">Oncology</option>
+                <option value="Pediatrics">Pediatrics</option>
+                <option value="Psychiatry">Psychiatry</option>
+                <option value="Psychology">Psychology</option>
+                <option value="Radiology">Radiology</option>
+                <option value="Urology">Urology</option>
+              </select>
+              <label>Appoinment Time</label> <input type="datetime-local" readonly required name="appointmentTime" id="pat_aptTime"  class="patient-time pat-form-input"></input>
+              <div class="btn-section">
+                <button type="submit" class="btn-update">Update</button>
+              </div>
+              <span  class="patient-detail-close">&#10006; </span>
+           
+          </div>
+        </form>
+        </div>
+
+        </div>
+      </div>
+     
+    </section>
+    <section class="form-section">
+      <div class="form-main-container">
+        <div class="form-container">
+          <header class="form-header">
+            <h1 class="form-heading">New Patient Appoinment Form</h1>
+          </header>
+          <form
+            id="appointment-form"
+            name="appointmentform"
+          >
+            <div>
+              <label class="label">FullName</label>
+              <div class="input-box input-fulname">
+                <div>
+                  <input
+                    type="text"
+                    id="userfirstname"
+                    name="userFirstName"
+                    placeholder="John " required
+                  />
+                  <label class="label-secondary" for="userfirstname"
+                    >First Name</label
+                  >
+                </div>
+                <div>
+                  <input
+                    type="text"
+                    id="userlastname"
+                    name="userLastName"
+                    placeholder="Smith"
+                  />
+                  <label class="label-secondary" for="userlastname"
+                    >Last Name</label
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="input-box">
+              <div>
+                <label class="label" for="useremail">Email Address</label>
+                <input
+                  type="email"
+                  id="useremail"
+                  name="useremail"
+                  placeholder="my@example.com"
+                />
+              </div>
+              <div>
+                <label class="label" for="usernumber">Phone No</label>
+                <input
+                  type="text"
+                  id="usernumber"
+                  name="usernumber"
+                  placeholder=" +91 00000 00000" required
+                />
+              </div>
+            </div>
+            <div class="input-box">
+              <div>
+                <label class="label" for="dob">Date of Birth</label>
+                <input
+                  type="date"
+                  id="userdob"
+                  name="userdob"
+                  placeholder="Date of birth"
+                />
+              </div>
+              <div class="input-field">
+                <label class="label">Gender</label>
+                <div class="gender">
+                  <div>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Male"
+                      id="gen1" required
+                    /><label for="gen1">Male</label>
+                  </div>
+                  <div>
+                    <input
+                      type="radio"
+                      name="gender"
+                      value="Female"
+                      id="gen2"
+                    /><label for="gen2">Female</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="input-col-3">
+              <div>
+                <label class="label" for="bloodgroup">Blood Group</label>
+                <input
+                  type="text"
+                  id="bloodgroup"
+                  name="bloodgroup"
+                  placeholder=" B+ "
+                />
+              </div>
+              <div>
+                <label class="label" for="height">Height</label>
+                <input
+                  type="number"
+                  id="height"
+                  name="height"
+                  placeholder=" 170 cm "
+                />
+              </div>
+              <div>
+                <label class="label" for="weight">Weight</label>
+                <input
+                  type="number"
+                  id="weight"
+                  name="weight"
+                  placeholder=" 80 Kg "
+                />
+              </div>
+            </div>
+            <div>
+              <label class="label">Address</label>
+              <div class="address">
+                <input type="text" name="houseNo" placeholder=" House No.." />
+                <input type="text" name="street" placeholder="Street Address" />
+                <input
+                  class="address-input"
+                  name="city"
+                  type="text"
+                  placeholder="City"
+                />
+                <input
+                  class="address-input"
+                  name="district"
+                  type="text"
+                  placeholder="District"
+                />
+                <input
+                  class="address-input"
+                  type="text"
+                  name="state"
+                  placeholder="State / Province"
+                />
+                <input
+                  class="address-input"
+                  type="text"
+                  name="pincode"
+                  placeholder="Postal /Zip Code"
+                />
+              </div>
+            </div>
+            <input type="hidden" name="user_id" id="user_id" />
+            <div class="input-box">
+              <div class="input-field">
+                <label class="label" for="checkup"
+                  >Which medical department do you Want?</label
+                >
+                <select name="checkup" id="checkup" required>
+                  <option value="general Checkup">General Checkup</option>
+                  <option value="Allergic">Allergic Diseases</option>
+                  <option value="Cardiology">Cardiology</option>
+                  <option value="skin">Skin and Venereal Disease</option>
+                  <option value="ENT Disorders">
+                    Ear,Nose and Throat Disorders
+                  </option>
+                  <option value="Eye">Eye Center</option>
+                  <option value="Infections">Infections Diseases</option>
+                  <option value="Neurology">Neurology</option>
+                  <option value="Oncology">Oncology</option>
+                  <option value="Pediatrics">Pediatrics</option>
+                  <option value="Psychiatry">Psychiatry</option>
+                  <option value="Psychology">Psychology</option>
+                  <option value="Radiology">Radiology</option>
+                  <option value="Urology">Urology</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label class="label" for="doctor">Specalist Doctors</label>
+                <select name="doctorName" id="doctor" required>
+                  <option value="">-select Doctor-</option>
+                  <option value="Dr.John">Dr.John</option>
+                  <option value="Dr.Smith">Dr.Smith</option>
+                  <option value="Dr.Adam">Dr.Adam</option>
+                  <option value="Dr.Jonas">Dr.Jonas</option>
+                </select>
+              </div>
+            </div>
+            <div class="input-box">
+              <div class="input-field">
+                <label class="label" for="time">Select Time</label>
+                <input
+                  type="datetime-local"
+                  id="apmnttime"
+                  name="appointmentTime" required
+                />
+              </div>
+              <div>
+                <label class="label" for="">Contact Preference</label>
+                <div class="contact">
+                  <div>
+                    <input type="checkbox" id="contact-email" name="contact" />
+                    <label class="" for="contact-email">Via Email</label>
+                  </div>
+                  <div>
+                    <input type="checkbox" id="contact-phone" name="contact" />
+                    <label class="" for="contact-phone">Via Phone</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="text-box">
+              <label class="label" for="description"
+                >Please explain your medical history briefly.</label
+              >
+              <textarea
+                name="description"
+                id="description"
+                rows="7"
+                placeholder="Type here.."
+              ></textarea>
+            </div>
+            <div class="check-box-agree">
+              <input type="checkbox" id="chkbox" required />
+              <label class="checkbox-label" for="chkbox" >
+                I agree to the terms and conditions
+              </label>
+            </div>
+            <div class="footer">
+              <button type="submit" class="button" onclick="">
+                Make Appoinment
+              </button>
+            </div>
+          </form>
+          <div>
+            <button class="btn-close" onclick="formClose()">
+              <svg
+                data-v-6a943414=""
+                width="24"
+                height="24"
+                xmlns="http://www.w3.org/2000/svg"
+                class="close-icon"
+              >
+                <path
+                  d="M6.414 5A1 1 0 1 0 5 6.414L10.586 12 5 17.586A1 1 0 1 0 6.414 19L12 13.414 17.586 19A1 1 0 1 0 19 17.586L13.414 12 19 6.414A1 1 0 1 0 17.586 5L12 10.586 6.414 5Z"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="cancel-popup hidden">
+      <div class="popup-container">
+      <div class="cancel-img">
+        <img src="images/trash.png" alt="trash-icon">
+      </div>  
+        <div class="cancel-cont">
+          <p class="cancel-text">Do you want Cancel your Appointment.?</p>
+          <button onclick="cancelPopupHide()" class="btn-popup btn-cancel">Cancel</button>
+          <button  class="btn-popup btn-delete">Delete</button>
+          <button onclick="cancelPopupHide()" class="cancel-popup-closebtn"><img class="cancel-popup-close" src="images/icons8-close-24.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+    <div class="success-popup hidden">
+      <div class="success-popup-container">
+      <div class="success-img">
+        <img  src="images/tick.png" alt="success-icon">
+      </div>  
+        <div class="success-cont">
+          <p class="success-text">Appointment Booked successfully</p>
+          <button onclick="successPopupHide()"  class="success-popup-closebtn"><img class="success-popup-close" src="images/icons8-close-24.png" alt=""></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

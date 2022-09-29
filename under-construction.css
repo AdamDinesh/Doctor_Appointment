@@ -1,0 +1,49 @@
+.work-section {
+  padding: 52px 80px;
+  background-color: #e8f1ff;
+}
+.work-container {
+  margin: 0 auto;
+  text-align: center;
+}
+.work-container h1 {
+  font-size: 44px;
+  font-weight: 700;
+  color: #333;
+  line-height: 1.05;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.work-container img {
+  width: 40%;
+}
+.work-subscribe-text {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+.work-sigup-text {
+  font-size: 15px;
+  color: #555;
+}
+.work-subscribe-input {
+  width: 30% !important;
+  height: 35px !important;
+  position: relative;
+  border-radius: 0 !important;
+}
+.work-container *:focus {
+  outline: none;
+}
+.work-subscribe::after {
+  content: "Notify Me";
+  position: absolute;
+  text-transform: uppercase;
+  padding: 9px 17px;
+  font-size: 14px;
+  background-color: #333;
+  color: #fff;
+  font-weight: 500;
+  right: 36%;
+  cursor: pointer;
+}

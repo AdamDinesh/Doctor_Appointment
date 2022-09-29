@@ -1,0 +1,468 @@
+h2 {
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 500;
+  /* margin-bottom: 30px; */
+}
+.no-data {
+  font-size: 18px;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+.no-data span {
+  color: #1252c2;
+}
+.no-data-link {
+  display: inline-block;
+  padding-bottom: 3px;
+  color: #1252c2 !important;
+}
+.no-data-link:hover {
+  cursor: pointer;
+
+  border-bottom: 2px solid currentcolor;
+}
+.no-cart {
+  margin: -20px auto 20px;
+  height: 133px;
+  width: 200px;
+  background-image: url(images/schedule-appointment-concept-icon-vector-29126888-removebg-preview.png);
+
+  background-position: 217px 225px;
+}
+.hidden {
+  display: none;
+}
+.appoinment-section {
+  margin: 0 auto;
+  padding: 80px 96px 80px 128px;
+}
+
+.appoinment-card {
+  /* border: 1px solid; */
+  padding: 10px 20px;
+  background-color: #fff;
+  border-radius: 7px;
+  margin-bottom: 20px;
+  border-left: 7px solid;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.appoinment-title {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.view-more {
+  color: #1252c2;
+  cursor: pointer;
+  justify-self: center;
+}
+.card-doctor-name {
+  font-size: 18px;
+}
+.card-time {
+  color: #383838;
+}
+
+.card-box {
+  position: relative;
+  transition: all 0.4s;
+}
+.card-box:hover {
+  cursor: pointer;
+  transition: all 0.4s;
+  transform: scale(1.04);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.card-list {
+  padding: 30px 20px;
+  background-color: #fff;
+  color: #112a46;
+  border-radius: 8px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  /* transition: all 0.4s; */
+  overflow: hidden;
+  position: relative;
+}
+
+.card-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.card-container {
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card-cancel-icon {
+  position: absolute;
+  right: 25px;
+  top: 25px;
+}
+
+.three-dot-icon:hover {
+  background-color: rgb(237, 217, 217);
+  cursor: pointer;
+}
+.card-delete-btn {
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  display: none;
+  transition: all 0.4s;
+}
+.card-delete-btn button {
+  /* display: inline-block; */
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #fff;
+  background-color: rgba(255, 68, 0, 0.7);
+  cursor: pointer;
+}
+.card-details {
+  position: absolute;
+  right: 15px;
+  bottom: 23px;
+  font-size: 15px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  color: #1252c2;
+
+  font-weight: 600;
+}
+.dot {
+  height: 6px;
+  width: 6px;
+
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: -3px;
+}
+.Approved {
+  color: #1252c2;
+}
+.Booked {
+  /* color: #4d4d4d; */
+  color: #1252c2;
+}
+.Canceled {
+  color: #f0483e !important;
+}
+.Completed {
+  /* color: #2ecc71; */
+  color: #1fb141;
+}
+
+.card-dr-name {
+  font-weight: 500;
+}
+/* .card-cancel-box {
+} */
+.card-close-icon {
+  height: 15px;
+  width: 15px;
+  fill: #888;
+  transition: all 0.2s;
+}
+.card-close-icon:hover {
+  fill: #112a46;
+}
+.card-status {
+  font-weight: 500;
+  font-size: 17px;
+  color: #1252c2;
+}
+
+/* patient full details */
+.patient-detail-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-attachment: fixed;
+}
+.patient-full-details {
+  margin: 0 auto;
+  width: 500px;
+  /* height: 500px; */
+  padding: 30px 40px;
+  background-color: #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border-radius: 11px;
+  /* border: 1px solid; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(6, 1fr);
+  /* gap: 20px; */
+  position: relative;
+}
+.patient-title {
+  grid-column: 1 /-1;
+}
+.patient-detail-close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 18px;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #333;
+}
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+/* sort */
+.sort-section {
+  position: relative;
+}
+.sort-container {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: flex-end;
+  position: absolute;
+  right: 97px;
+  top: 91px;
+  cursor: pointer;
+}
+.sort-container img {
+  width: 24px;
+  height: 24px;
+  vertical-align: bottom;
+}
+.sort-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.sort-list li:not(:first-child) {
+  padding: 8px 16px;
+  background-color: #fff;
+  border-radius: 100px;
+  min-width: 75px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s;
+  /* background-color: #b8cbed;*/
+  color: #5c5c5c;
+}
+
+.sort-list li:not(:first-child):hover,
+.sort-list-active {
+  /* background-color: #1252c2; */
+  background-color: #0066ff !important;
+  color: #fff !important;
+  /* color: #333; */
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.card-cancel-close {
+  color: #5555558c;
+  font-size: 18px;
+}
+
+.edit-icon {
+  height: 17px;
+  width: 15px;
+  vertical-align: -1px;
+  cursor: pointer;
+  margin-left: 3px;
+}
+.btn-section {
+  grid-column: 1/-1;
+  text-align: center;
+  display: none;
+}
+.btn-update {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #0066ff;
+  color: #fff;
+  margin-top: 10px;
+  font-weight: 500;
+  cursor: pointer;
+  border: none;
+  border-radius: 100px;
+  letter-spacing: 0.6px;
+  transition: all 0.3s;
+}
+.btn-popup:hover,
+.btn-update:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.patient-full-details .pat-form-input {
+  border: 1px solid transparent;
+}
+.patient-full-details :focus {
+  outline: 1px solid transparent;
+}
+.show {
+  display: block;
+}
+
+.patient-full-details select {
+  appearance: none;
+}
+.border {
+  border: 1px solid #e5e5e5 !important;
+}
+.border-active {
+  border: 1px solid #0066ff !important;
+}
+/* demo */
+.no-appointments {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: none;
+}
+
+/* cancel popup */
+.cancel-popup,
+.success-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+.success-popup-container,
+.popup-container {
+  margin: 200px auto;
+  width: fit-content;
+  text-align: center;
+  /* height: 400px; */
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1fr 1.1fr;
+  border-radius: 11px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+.success-popup-container {
+  grid-template-rows: 0.5fr 0.2fr;
+}
+.cancel-img {
+  background-color: #fff;
+  padding: 40px 30px 0px;
+}
+.success-img {
+  background-color: #fff;
+  padding: 20px 30px 0px;
+}
+.cancel-img img {
+  height: 80px;
+}
+.success-img img {
+  height: 100px;
+}
+.cancel-cont {
+  padding: 20px 20px;
+  background-color: #fff;
+}
+.success-cont {
+  padding: 0px 20px;
+  background-color: #fff;
+}
+.success-title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.cancel-text,
+.success-text {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  line-height: 1.8;
+}
+.success-text {
+  font-size: 20px;
+  color: #112a46;
+}
+.success-link {
+  display: inline-block;
+  padding: 9px 18px;
+  border-radius: 100px;
+  text-decoration: none;
+  background-color: #2ecc71;
+  color: #fff;
+  font-weight: 500;
+  transition: all 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.success-btn {
+  width: 100%;
+  background-color: transparent;
+}
+.success-link:hover {
+  background-color: #29b866;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.cancel-popup-closebtn,
+.success-popup-closebtn {
+  position: absolute;
+  top: 18px;
+  right: 13px;
+  background-color: transparent;
+}
+.cancel-popup-close,
+.success-popup-close {
+  cursor: pointer;
+  width: 80%;
+}
+.btn-popup {
+  padding: 8px 24px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 500;
+}
+.btn-cancel {
+  background-color: #efefef;
+}
+.btn-delete {
+  background-color: #f53e30;
+  margin-left: 10px;
+  color: white;
+}

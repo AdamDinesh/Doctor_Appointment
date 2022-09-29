@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="form.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <header class="form-header">
+        <h1 class="form-heading">New Patient Appoinment Form</h1>
+      </header>
+      <form method="get" action="#" id="appoinment-form" name="appoinmentform">
+        <div>
+          <label class="label">FullName</label>
+          <div class="input-box input-fulname">
+            <div>
+              <input
+                type="text"
+                id="userfirstname"
+                name="userfirstname"
+                placeholder="John "
+              />
+              <label class="label-secondary" for="username">First Name</label>
+            </div>
+            <div>
+              <input
+                type="text"
+                id="userlastname"
+                name="userlastname"
+                placeholder="Smith"
+              />
+              <label class="label-secondary" for="username">Last Name</label>
+            </div>
+          </div>
+        </div>
+        <div class="input-box">
+          <div>
+            <label class="label" for="useremail">Email Address</label>
+            <input
+              type="email"
+              id="useremail"
+              name="useremail"
+              placeholder="my@example.com"
+            />
+          </div>
+          <div>
+            <label class="label" for="usernumber">Phone No</label>
+            <input
+              type="text"
+              id="usernumber"
+              name="usernumber"
+              placeholder=" +91 00000 00000"
+            />
+          </div>
+        </div>
+        <div class="input-box">
+          <div>
+            <label class="label" for="dob">Date of Birth</label>
+            <input
+              type="date"
+              id="userdob"
+              name="userdob"
+              placeholder="Date of birth"
+            />
+          </div>
+          <div class="input-field">
+            <label class="label">Gender</label>
+            <div class="gender">
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Male"
+                  id="gen1"
+                /><label for="gen1">Male</label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name="gender"
+                  value="Female"
+                  id="gen2"
+                /><label for="gen2">Female</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="input-col-3">
+          <div>
+            <label class="label" for="bloodgroup">Blood Group</label>
+            <input
+              type="text"
+              id="bloodgroup"
+              name="bloodgroup"
+              placeholder=" B+ "
+            />
+          </div>
+          <div>
+            <label class="label" for="height">Height</label>
+            <input
+              type="number"
+              id="height"
+              name="height"
+              placeholder=" 170 cm "
+            />
+          </div>
+          <div>
+            <label class="label" for="weight">Weight</label>
+            <input
+              type="number"
+              id="weight"
+              name="weight"
+              placeholder=" 80 Kg "
+            />
+          </div>
+        </div>
+        <div>
+          <label class="label">Address</label>
+          <div class="address">
+            <input type="text" name="houseNo" placeholder=" House No.." />
+            <input type="text" name="street" placeholder="Street Address" />
+            <input
+              class="address-input"
+              name="city"
+              type="text"
+              placeholder="City"
+            />
+            <input
+              class="address-input"
+              name="district"
+              type="text"
+              placeholder="District"
+            />
+            <input
+              class="address-input"
+              type="text"
+              name="state"
+              placeholder="State / Province"
+            />
+            <input
+              class="address-input"
+              type="text"
+              name="pincode"
+              placeholder="Postal /Zip Code"
+            />
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input-field">
+            <label class="label" for="doctor"
+              >Which medical department do you Want?</label
+            >
+            <select name="checkup" id="doctor">
+              <option value="general Checkup">General Checkup</option>
+              <option value="Allergic">Allergic Diseases</option>
+              <option value="Cardiology">Cardiology</option>
+              <option value="skin">Skin and Venereal Disease</option>
+              <option value="ENT Disorders">
+                Ear,Nose and Throat Disorders
+              </option>
+              <option value="Eye">Eye Center</option>
+              <option value="Infections">Infections Diseases</option>
+              <option value="Neurology">Neurology</option>
+              <option value="Oncology">Oncology</option>
+              <option value="Pediatrics">Pediatrics</option>
+              <option value="Psychiatry">Psychiatry</option>
+              <option value="Psychology">Psychology</option>
+              <option value="Radiology">Radiology</option>
+              <option value="Urology">Urology</option>
+            </select>
+          </div>
+          <div class="input-field">
+            <label class="label" for="doctor">Specalist Doctors</label>
+            <select name="doctorName" id="doctor">
+              <option value="">-select Doctor-</option>
+              <option value="">Dr.John</option>
+              <option value="">Dr.Smith</option>
+              <option value="">Dr.Adam</option>
+              <option value="">Dr.Jonas</option>
+            </select>
+          </div>
+        </div>
+        <div class="input-box">
+          <div class="input-field">
+            <label class="label" for="time">Select Time</label>
+            <input type="datetime-local" id="time" name="appoinmentTime" />
+          </div>
+          <div>
+            <label class="label" for="">Contact Preference</label>
+            <div class="contact">
+              <div>
+                <input type="checkbox" id="contact-email" name="contact" />
+                <label class="" for="contact-email">Via Email</label>
+              </div>
+              <div>
+                <input type="checkbox" id="contact-phone" name="contact" />
+                <label class="" for="contact-phone">Via Phone</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <input type="hidden" id="user_id" />
+        <div class="text-box">
+          <label class="label" for="description"
+            >Please explain your medical history briefly.</label
+          >
+          <textarea
+            name="description"
+            id="description"
+            rows="7"
+            placeholder="Type here.."
+          ></textarea>
+        </div>
+        <div class="check-box-agree">
+          <input type="checkbox" id="chkbox" />
+          <label class="checkbox-label" for="chkbox">
+            I agree to the terms and conditions
+          </label>
+        </div>
+        <div class="footer">
+          <button type="submit" onclick="" class="button">
+            Make Appoinment
+          </button>
+        </div>
+      </form>
+      <div>
+        <button class="btn-close" onclick="formClose()">
+          <img src="images/icons8-close-24.png" alt="" />
+        </button>
+      </div>
+    </div>
+  </body>
+  <script>
+    let dataArr = [];
+    function submitAppoinmentForm() {
+      let formdata = document.getElementById("appoinment-form");
+      let gender = document.appoinmentform.gender.value;
+      let formValue = new FormData(formdata);
+      // let patientdata = {};
+      let query = "https://www.gg.com?";
+      for (const [key, value] of formValue) {
+        // patientdata[key] = value;
+        query += `${key}=${value}&`;
+      }
+      query += `gender=${gender}`;
+      console.log(query);
+      // patientdata["gender"] = gender;
+
+      // dataArr.push(patientdata);
+
+      // localStorage.setItem("patientData", JSON.stringify(dataArr));
+      // window.location.href = "patient.html";
+    }
+    function formClose() {
+      window.location.href = "main.html";
+    }
+  </script>
+</html>

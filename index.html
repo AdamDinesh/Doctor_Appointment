@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login.css" />
+    <script src="login.js" defer></script>
+   
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="login-img"></div>
+        <div  class="login-form">
+          <h1 class="heading-primary">Welcome to Health Bloom</h1>
+          <h3 class="heading-secondary">
+            Let's help you stay on top of your health
+          </h3>
+          <div class="error-popup hidden" id="error-popup-login">
+          <p class="error-msg"><span class="error-msg-text">Incorrect email or password.</span>  
+            <img class="error-msg-close" src="images/icons8-close-24.png" alt="" />
+          </p></div>
+          <form  id="login-form-data">
+            <div>
+              <label class="label" for="useremail">Email Address</label>
+              <input
+                type="email"
+                id="useremail"
+                name="user_email"
+                placeholder="my@example.com" required
+              />
+            
+            </div>
+            <div class="password-container">
+              <label class="label" for="userpassword">Password</label>
+              <input
+                type="password"
+                id="userpassword"
+                name="user_password"
+                placeholder="Enter Password" required 
+              />
+              <img class="eye-icon" onclick="showPassword('userpassword')" src="images/icons8-eye-16.png" alt="">
+            </div>
+            <div class="check-box">
+              <input type="checkbox" id="chkbox" />
+              <label class="checkbox-label" for="chkbox">
+                Keep me logged in</label
+              >
+            </div>
+            <button class="btn-signup" type="submit">Log In</button>
+          </form>
+          <div class="footer">
+            <div class="login-forget-link">
+              <a href="#" class="provider-login">Provider login</a>
+              <a href="#" class="forget-password"> Forget Password? </a>
+            </div>
+     
+
+             <p class='margin-bottom-md' >
+              Don't have an account?
+              <a  id="register-page-link" class="signup-link"> Signup here!</a>
+            </p>
+          </div>
+        </div>
+        <div class="register-form hidden" >
+          <h1 class="heading-primary margin-bottom-sm">Register to Health Bloom</h1>
+          <div class="error-popup hidden" id="error-popup-register">
+            <p class="error-msg">Email already exists,<br> you can try logging in with this email.
+              <img class="error-msg-close" src="images/icons8-close-24.png" alt="" />
+            </p></div>
+
+          <form name="registerFrom"  id="register-form-data">
+            <div>
+              <label class="label" for="username">Full Name</label>
+              <input
+                type="text"
+                id="username"
+                name="username" value=""
+                placeholder="John smith" required minlength="4"
+              />
+              <div>
+                <label class="label" for="uemail">Email Address</label>
+                <input
+                  type="email"
+                  id="uemail"
+                  name="user_email" value=""
+                  placeholder="my@example.com" required
+                />
+            <div>
+              <label class="label" for="usernumber">Phone No</label>
+              <input
+                type="text"
+                id="usernumber" value=""
+                name="user_number"
+                placeholder=" Enter 10 digit Mobile Number. " required pattern="[6-9]{1}[0-9]{9}" 
+                title="Phone number start with 6-9 and remaing 9 digit with 0-9"
+              />
+             
+            </div>
+            <div class="password-container">
+              <label class="label" for="userpwd">Password</label>
+              <input
+                type="password" value=""
+                id="userpwd"
+                name="user_password" 
+                placeholder="Enter Password" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,12}$"
+                title='At least 1 Uppercase,1 Lowercase,1 Number,1 Symbol,Min 8 chars'
+              />
+              <img class="eye-icon" onclick="showPassword('userpwd')" src="images/icons8-eye-16.png" alt="">
+            </div>
+            <div class="check-box">
+              <input type="checkbox" id="agree" name="agree"  required/>
+              <label class="checkbox-label" for="agree">
+                I agree with Terms and Conditions</label
+              >
+            </div>
+            <button  type="submit" class="btn-signup" >GET STARTED</button>
+          </form>
+          <div class="footer">
+      
+            <p>
+              Do have an account?
+            <a  id="login-page-link" class="signup-link">Login here!</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="success-popup hidden">
+      <div class="popup-container">
+      <div class="success-img"><img src="images/icons8-done-128.png" alt="success-icon"></div>  
+        <div class="success-cont">
+          <h2 class="success-title">Success!</h2>
+          <p class="success-text">Your account has been created successfully.</p>
+          <button   class="success-btn"> <a class="success-link" href="http://localhost:8080/Doctor-Appointment/index.html">Go to Login &rarr;</a></button>
+          <button  class="success-popup-closebtn"><img class="success-popup-close" src="images/icons8-close-24.png" alt=""></button>
+        </div>
+      </div>
+    </div>    
+  </body>
+</html>
